@@ -15,8 +15,6 @@ target_sources(logic INTERFACE
 
 target_include_directories(logic INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(Lab1 main.cpp)
-
 target_link_libraries(Lab1 PRIVATE logic)
 
 enable_testing()
