@@ -1,0 +1,17 @@
+<map id="SortingAlgorithm&lt; T &gt;" name="SortingAlgorithm&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,176,179"/>
+<area shape="rect" id="Node000002" href="$classBucketSort.html" title=" " alt="" coords="232,5,363,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,141,157,90,189,63,223,40,247,28,249,33,225,44,192,68,161,94,113,145"/>
+<area shape="rect" id="Node000003" href="$classHeapSort.html" title=" " alt="" coords="237,55,357,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,144,169,116,223,89,252,78,254,83,225,94,171,121,125,148"/>
+<area shape="rect" id="Node000004" href="$classInsertionSort.html" title=" " alt="" coords="226,104,369,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,148,243,127,244,132,158,153"/>
+<area shape="rect" id="Node000005" href="$classMergeSort.html" title=" " alt="" coords="234,153,361,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="190,163,234,163,234,169,190,169"/>
+<area shape="rect" id="Node000006" href="$classQuickSort.html" title=" " alt="" coords="236,203,359,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="158,179,244,200,243,205,157,184"/>
+<area shape="rect" id="Node000007" href="$classRadixSort.html" title=" " alt="" coords="236,252,359,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="125,183,225,237,257,249,255,254,223,242,123,188"/>
+<area shape="rect" id="Node000008" href="$classSelectionSort.html" title=" " alt="" coords="224,301,371,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="113,187,161,237,192,263,225,286,252,299,249,304,223,291,189,267,158,241,110,191"/>
+</map>

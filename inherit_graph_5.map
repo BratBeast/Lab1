@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classTextEntity.html" title=" " alt="" coords="5,55,92,80"/>
+<area shape="rect" id="Node000001" href="$classCompositeTextEntity.html" title=" " alt="" coords="140,29,297,55"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="105,56,140,51,140,56,106,62"/>
+<area shape="rect" id="Node000004" href="$classSentence.html" title=" " alt="" coords="177,79,260,104"/>
+<area shape="poly" id="edge15_Node000000_Node000004" title=" " alt="" coords="106,73,177,83,176,88,105,78"/>
+<area shape="rect" id="Node000002" href="$classDocument.html" title=" " alt="" coords="345,5,435,31"/>
+<area shape="poly" id="edge13_Node000001_Node000002" title=" " alt="" coords="311,26,345,22,346,27,311,32"/>
+<area shape="rect" id="Node000003" href="$classParagraph.html" title=" " alt="" coords="347,55,433,80"/>
+<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="311,53,347,58,346,64,310,58"/>
+</map>

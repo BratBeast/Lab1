@@ -1,0 +1,9 @@
+<map id="CompositeTextEntity" name="CompositeTextEntity">
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,79,185,104"/>
+<area shape="rect" id="Node000003" href="$classDocument.html" title=" " alt="" coords="5,152,95,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="90,117,61,154,57,150,86,113"/>
+<area shape="rect" id="Node000004" href="$classParagraph.html" title=" " alt="" coords="119,152,205,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,113,155,150,151,154,122,117"/>
+<area shape="rect" id="Node000002" href="$classTextEntity.html" title=" " alt="" coords="63,5,149,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,44,109,79,103,79,103,44"/>
+</map>
