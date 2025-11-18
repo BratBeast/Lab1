@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lab1 OOP Project: Main Page</title>
+<title>Lab1 OOP Project: ООП Лаба 1 — Текстові документи + Сортування</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,10 +69,61 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Lab1 OOP Project Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">ООП Лаба 1 — Текстові документи + Сортування </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Варіант</h1>
+<ul>
+<li><b>Перелік 1:</b> Списки та алгоритми сортування (<code>insertion sort</code>, <code>quicksort</code>, <code>merge sort</code>) + інші алгоритми сортування (<code><a class="el" href="classSelectionSort.html">SelectionSort</a></code>, <code><a class="el" href="classHeapSort.html">HeapSort</a></code>); + реалізація швидких алгоритмів, не заснованих на порівнянні (<code><a class="el" href="classBucketSort.html">BucketSort</a></code>, <code><a class="el" href="classRadixSort.html">RadixSort</a></code>); + реалізація загального механізму для підключення нових алгоритмів сортування.</li>
+<li><b>Перелік 2:</b> Текстові документи (рівні a, b, c).</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Опис та ключові зміни</h1>
+<p>Мета — продемонструвати базові ідеї ООП: <b>класи</b>, <b>інкапсуляція</b>, <b>успадкування</b>, <b>статичний</b> та <b>динамічний поліморфізм</b>. Домен: текстові документи як колекції об'єктів (речення, абзаци).</p>
+<p>В рамках виправлень згідно з відгуком викладача було внесено наступні архітектурні покращення:</p><ol type="1">
+<li><b>Розширено ієрархію класів</b> до 3-х рівнів (<code><a class="el" href="classTextEntity.html">TextEntity</a></code> → <code><a class="el" href="classCompositeTextEntity.html">CompositeTextEntity</a></code> → <code><a class="el" href="classParagraph.html">Paragraph</a></code>).</li>
+<li><b>Переписано <code><a class="el" href="classArrayList.html" title="Реалізація списку на основі динамічного масиву.">ArrayList</a></code></b> на низькорівневу реалізацію з ручним керуванням пам'яттю та зміною розміру масиву.</li>
+<li><b>Переписано алгоритми сортування</b> для роботи напряму з інтерфейсом <code><a class="el" href="classList.html" title="Абстрактний шаблонний клас для списку.">List</a></code>, а не зі стандартним <code>std::vector</code>.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Модулі та структура проєкту</h1>
+<p>(усі файли лежать у кореневій директорії)</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Файл   </th><th class="markdownTableHeadNone">Зміст    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="TextEntities_8h_source.html">TextEntities.h</a></code>   </td><td class="markdownTableBodyNone">3-рівнева ієрархія класів для моделювання документів (<code><a class="el" href="classTextEntity.html">TextEntity</a></code>, <code><a class="el" href="classCompositeTextEntity.html">CompositeTextEntity</a></code>, <code><a class="el" href="classParagraph.html">Paragraph</a></code>, <code><a class="el" href="classSentence.html">Sentence</a></code>).    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>List.h</code>   </td><td class="markdownTableBodyNone">Шаблонний <code><a class="el" href="classList.html" title="Абстрактний шаблонний клас для списку.">List</a>&lt;T&gt;</code> та його реалізації: низькорівневий <code><a class="el" href="classArrayList.html" title="Реалізація списку на основі динамічного масиву.">ArrayList</a>&lt;T&gt;</code> і зв'язний <code><a class="el" href="classLinkedList.html" title="Реалізація списку на основі двозв&#39;язного списку.">LinkedList</a>&lt;T&gt;</code>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="SortingAlgorithms_8h_source.html">SortingAlgorithms.h</a></code>   </td><td class="markdownTableBodyNone">Інтерфейс <code><a class="el" href="classSortingAlgorithm.html">SortingAlgorithm</a>&lt;T&gt;</code> та 7 реалізацій, що працюють напряму з інтерфейсом <code><a class="el" href="classList.html" title="Абстрактний шаблонний клас для списку.">List</a></code>.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="TextAnalyzer_8h.html" title="Клас для аналізу та обробки текстових сутностей.">TextAnalyzer.h</a></code>   </td><td class="markdownTableBodyNone">Клас-фасад <code><a class="el" href="classTextAnalyzer.html" title="Клас-аналізатор для керування обробкою тексту.">TextAnalyzer</a></code> для застосування стратегій сортування до списків.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>main.cpp</code>   </td><td class="markdownTableBodyNone">Демонстрація створення документа та застосування всіх 7 алгоритмів сортування.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>CMakeLists.txt</code>   </td><td class="markdownTableBodyNone">Конфігурація збірки проєкту.   </td></tr>
+</table>
+<hr  />
+<h1><a class="anchor" id="autotoc_md5"></a>
+Документація</h1>
+<p>Проєкт документовано за стандартом Doxygen. Автоматично згенерована документація доступна за посиланням: [Посилання]</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Збірка та запуск</h1>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Запуск в IDE (CLion, Visual Studio)</h3>
+<ol type="1">
+<li>Відкрити папку проєкту.</li>
+<li>Натиснути <b>Build</b> (🔨).</li>
+<li>Натиснути <b>Run</b> (▶️).</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Запуск з терміналу</h3>
+<p>```bash mkdir build cd build cmake .. cmake &ndash;build . ./Lab1 </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

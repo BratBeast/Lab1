@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_0',['get',['../classList.html#acfbe12be51bc72507d2161627541980a',1,'List::get()'],['../classArrayList.html#a02fbe8d5d6b876332229e2a078094cff',1,'ArrayList::get()'],['../classLinkedList.html#af439f5ef69eff0ab0471edce5a3ba08a',1,'LinkedList::get()']]]
+  ['findlongsentences_0',['findLongSentences',['../classTextAnalyzer.html#a4a5a16cca45455aa6fd8e3752980a5d5',1,'TextAnalyzer']]]
 ];
