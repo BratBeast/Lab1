@@ -1,3 +1,11 @@
+#/**
+ * @file List.h
+ * @brief Інтерфейси та реалізація динамічних списків.
+ *
+ * Цей файл містить шаблонний абстрактний клас List та його реалізації:
+ * ArrayList (на основі масиву) та LinkedList (на основі зв'язного списку).
+ */
+
 #ifndef LIST_H
 #define LIST_H
 
@@ -5,22 +13,60 @@
 #include <stdexcept>
 #include <utility>
 
-//шаблонний абстрактний клас (інтерфейс) для списку
+/**
+ * @brief Абстрактний шаблонний клас для списку.
+ * @tparam T Тип даних, що зберігаються у списку.
+ */
 template <typename T>
 class List {
 public:
     virtual ~List() = default;
 
+    /**
+     * @brief Додає елемент у кінець списку.
+     * @param element Елемент, який потрібно додати.
+     */
     virtual void add(const T& element) = 0;
+
+    /**
+     * @brief Отримує елемент за індексом.
+     * @param index Індекс елемента (починаючи з 0).
+     * @return Елемент типу T.
+     * @throws std::out_of_range Якщо індекс виходить за межі списку.
+     */
     virtual T get(size_t index) const = 0;
+
+    /**
+     * @brief Видаляє елемент за індексом.
+     * @param index Індекс елемента для видалення.
+     * @throws std::out_of_range Якщо індекс некоректний.
+     */
     virtual void remove(size_t index) = 0;
+
+    /**
+     * @brief Повертає кількість елементів у списку.
+     * @return size_t Розмір списку.
+     */
     virtual size_t size() const = 0;
+
+    /**
+     * @brief Перевіряє, чи список порожній.
+     * @return true, якщо список порожній, інакше false.
+     */
     virtual bool isEmpty() const = 0;
 
-    //метод для зміни елемента за індексом
+    /**
+     * @brief Замінює елемент за заданим індексом.
+     * @param index Індекс елемента.
+     * @param element Нове значення.
+     */
     virtual void set(size_t index, const T& element) = 0;
 
-    //метод для обміну двох елементів місцями
+    /**
+     * @brief Обмінює місцями два елементи.
+     * @param index1 Індекс першого елемента.
+     * @param index2 Індекс другого елемента.
+     */
     virtual void swap(size_t index1, size_t index2) {
         if (index1 >= size() || index2 >= size()) {
             throw std::out_of_range("Index out of range for swap");
@@ -30,6 +76,9 @@ public:
         set(index2, temp);
     }
 
+    /**
+     * @brief Виводить елементи списку в консоль.
+     */
     void print() const {
         for (size_t i = 0; i < size(); ++i) {
             std::cout << get(i) << "\n";
@@ -37,14 +86,20 @@ public:
     }
 };
 
-//низькорівнева реалізація ArrayList
+/**
+ * @brief Реалізація списку на основі динамічного масиву.
+ * @tparam T Тип елементів.
+ */
 template <typename T>
 class ArrayList : public List<T> {
 private:
-    T* data;
-    size_t currentSize;
-    size_t capacity;
+    T* data;            ///< Вказівник на масив даних
+    size_t currentSize; ///< Поточна кількість елементів
+    size_t capacity;    ///< Поточна ємність масиву
 
+    /**
+     * @brief Збільшує ємність масиву вдвічі.
+     */
     void resize() {
         capacity = (capacity == 0) ? 10 : capacity * 2;
         T* newData = new T[capacity];
@@ -56,6 +111,9 @@ private:
     }
 
 public:
+    /**
+     * @brief Конструктор ArrayList.
+     */
     ArrayList() : data(nullptr), currentSize(0), capacity(0) {
         resize();
     }
@@ -105,16 +163,23 @@ public:
     }
 
     void swap(size_t index1, size_t index2) override {
-        if (index1 >= currentSize || index2 >= currentSize) {
+         if (index1 >= currentSize || index2 >= currentSize) {
             throw std::out_of_range("Index out of range for swap");
         }
         std::swap(data[index1], data[index2]);
     }
 };
 
+/**
+ * @brief Реалізація списку на основі двозв'язного списку.
+ * @tparam T Тип елементів.
+ */
 template <typename T>
 class LinkedList : public List<T> {
 private:
+    /**
+     * @brief Внутрішня структура для вузла списку.
+     */
     struct Node {
         T value;
         Node* next = nullptr;
@@ -122,9 +187,9 @@ private:
         explicit Node(T val) : value(val) {}
     };
 
-    Node* head = nullptr;
-    Node* tail = nullptr;
-    size_t count = 0;
+    Node* head = nullptr; ///< Вказівник на початок списку
+    Node* tail = nullptr; ///< Вказівник на кінець списку
+    size_t count = 0;     ///< Кількість елементів
 
     Node* getNode(size_t index) const {
         if (index >= count) return nullptr;
@@ -173,14 +238,14 @@ public:
             throw std::out_of_range("Index out of range");
         }
 
-        Node* toDelete = getNode(index); // Використовуємо getNode
-        if (!toDelete) return; // Додаткова перевірка
+        Node* toDelete = getNode(index);
+        if (!toDelete) return;
 
         if (toDelete->prev) toDelete->prev->next = toDelete->next;
-        else head = toDelete->next; // Видаляли голову
+        else head = toDelete->next;
 
         if (toDelete->next) toDelete->next->prev = toDelete->prev;
-        else tail = toDelete->prev; // Видаляли хвіст
+        else tail = toDelete->prev;
 
         delete toDelete;
         count--;

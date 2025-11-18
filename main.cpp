@@ -3,7 +3,7 @@
 #include <string>
 
 #include "TextEntities.h"
-#include "List.h"
+#include "list.h"
 #include "SortingAlgorithms.h"
 #include "TextAnalyzer.h"
 

@@ -1,7 +1,7 @@
 #ifndef SORTING_ALGORITHMS_H
 #define SORTING_ALGORITHMS_H
 
-#include "List.h" // Працюємо виключно з нашим List
+#include "list.h" // Працюємо виключно з нашим List
 #include <functional>
 #include "TextEntities.h" // Потрібно для не-порівняльних сортувань
 #include <vector> // Дозволено для створення "кошиків" у BucketSort

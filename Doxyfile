@@ -1,0 +1,10 @@
+PROJECT_NAME           = "Lab1 OOP Project"
+PROJECT_BRIEF          = "Sorting Algorithms and Text Analysis"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = . README.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+FILE_PATTERNS          = *.h *.cpp *.md
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
